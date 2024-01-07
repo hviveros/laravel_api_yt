@@ -29,3 +29,8 @@ Route::post('/services',            'App\Http\Controllers\ServiceController@stor
 Route::get('/services/{service}',   'App\Http\Controllers\ServiceController@show');
 Route::put('/services/{service}',   'App\Http\Controllers\ServiceController@update');
 Route::delete('/services/{service}','App\Http\Controllers\ServiceController@destroy');
+
+Route::post('/clients/service',         'App\Http\Controllers\ClientController@attach');
+Route::post('/clients/service/detach',  'App\Http\Controllers\ClientController@detach');
+
+Route::get('/services/clients', 'App\Http\Controllers\ServiceController@clients');
