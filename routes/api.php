@@ -33,4 +33,4 @@ Route::delete('/services/{service}','App\Http\Controllers\ServiceController@dest
 Route::post('/clients/service',         'App\Http\Controllers\ClientController@attach');
 Route::post('/clients/service/detach',  'App\Http\Controllers\ClientController@detach');
 
-Route::get('/services/clients', 'App\Http\Controllers\ServiceController@clients');
+Route::post('/services/clients', 'App\Http\Controllers\ServiceController@clients');
